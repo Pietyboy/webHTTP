@@ -10,27 +10,28 @@
 
         <h2>1. GET и POST через netcat</h2>
         <h3>Команда GET:</h3>
-        <code>printf 'GET /get HTTP/1.1\r\nHost: httpbin.org\r\nConnection: close\r\n\r\n' | nc httpbin.org 80</с>
+        <p>printf 'GET /get HTTP/1.1 Host: httpbin.org Connection: close' | nc httpbin.org 80</p>
+
         <img src="screens/GET-1.png" width="600">
         
         <h3>Команда POST:</h3>
-        <code>printf 'POST /post HTTP/1.1\r\nHost: httpbin.org\r\nContent-Type: application/json\r\nContent-Length: 41\r\nConnection: close\r\n\r\n{"book":"Чапаев и Пустота","price":100}' | nc httpbin.org 80</code>
+        <p>printf 'POST /post HTTP/1.1 Host: httpbin.org Content-Type: application/json Content-Length: 41 Connection: close {"book":"Чапаев и Пустота","price":100}' | nc httpbin.org 80</p>
         <img src="screens/POST-1.png" width="600">
 
         <h2>2. Запросы через cURL</h2>
         <h3>Команда GET:</h3>
-        <code>curl -v http://httpbin.org/get</code>
+        <p>curl -v http://httpbin.org/get</p>
         <img src="screens/cURL-GET.png" width="600">
         <h3>Команда POST:</h3>
-        <code>curl -X POST http://httpbin.org/post \
+        <p>curl -X POST http://httpbin.org/post \
             -H "Content-Type: application/json" \
             -d '{"book":"Чапаев и Пустота","price":100}'
-        </code>
+        </p>
         <img src="screens/cURL-POST.png" width="600">
 
         <h2>3. GET-запрос к API ЦБ РФ с помощью Postman</h2>
         <h3>Пример URL:</h3>
-        <code>http://www.cbr.ru/scripts/XML_dynamic.asp?date_req1=02/03/2025&date_req2=14/03/2025&VAL_NM_RQ=R01235</code>
+        <p>http://www.cbr.ru/scripts/XML_dynamic.asp?date_req1=02/03/2025&date_req2=14/03/2025&VAL_NM_RQ=R01235</p>
         <img src="screens/posman.png" width="600">
     </body>
 </html>
